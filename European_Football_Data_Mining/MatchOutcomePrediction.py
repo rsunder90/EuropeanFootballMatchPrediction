@@ -135,13 +135,6 @@ def load_dataset(dataset, num_features):
 
     print(training_labels)
 
-    # Set index to second column
-    #training_labels -= 1
-    #test_labels -= 1
-    #validation_labels -= 1
-
-    print(training_labels)
-
     #data_file = load_information_gain_model(data_file, num_features)
     data_file = load_correlation_model(data_file, num_features)
 
@@ -216,6 +209,41 @@ def load_correlation_model(dataset, num_vars):
 
     dataset = numpy.delete(dataset, correlation_indices, 1)
     return dataset
+
+def baseline_classifier(dataset, num_features):
+
+    # Load the dataset
+    # First column has match IDs. The rest have several process specific information
+    data_file = np.genfromtxt(dataset, skip_header=1, delimiter=',', usecols=range(1, 31))
+    labels = np.genfromtxt(dataset, skip_header=1, dtype=np.dtype(int), delimiter=',', usecols=31)
+
+    Y_train = labels[0:13897]
+    Y_test = labels[13897:]
+
+    #data_file = load_information_gain_model(data_file, num_features)
+    data_file = load_correlation_model(data_file, num_features)
+
+    X_train = data_file[0:13897, :]
+    X_test = data_file[13897:, :]
+
+    clf = dummy.DummyClassifier(strategy='stratified',
+                            random_state=None, constant=None).fit(X_train, Y_train)
+
+    # now we predict test set labels using our trained model
+    predictedY = clf.predict(X_test)
+    # converting the numpy array to a python list
+    predictedY = predictedY.tolist()
+    # evaluating the model using accuracy
+    # accuracy = # of correctly predicted labels / # number of tweets in test set
+
+    correct = 0
+    for index, item in enumerate(Y_test):
+        if predictedY[index] == Y_test[index]:
+            correct += 1
+
+    # calculating accuracy value
+    accuracy = correct / len(Y_test)
+    print(accuracy)
 
 def sgd_optimization(learning_rate=0.1, n_epochs=1000, dataset="final_dataset.csv", batch_size=600):
     """
@@ -462,5 +490,7 @@ def randomize_dataset(dataset):
     np.savetxt("randomized_final_dataset.csv", data_file, fmt="%s", delimiter=",")
 
 if __name__ == '__main__':
-
-    sgd_optimization(dataset="randomized_final_dataset.csv")
+    
+    #baseline_classifier("randomized_final_dataset.csv", 31)
+    baseline_classifier("randomized_final_dataset.csv", 19)
+    #sgd_optimization(dataset="randomized_final_dataset.csv")
