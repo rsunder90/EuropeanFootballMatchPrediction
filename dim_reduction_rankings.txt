@@ -1,3 +1,101 @@
+VERSION 2 DIMENSIONALITY REDUCTION RANKINGS
+Information Gain
+Ranked attributes:
+ 0.03414   15 Home_Team_Ball_control
+ 0.03349   12 Home_Team_Dribbling
+ 0.0322     7 Home_Team_OverallRating
+ 0.03205   19 Home_Team_Reactions
+ 0.03161   10 Home_Team_Short_passing
+ 0.03155    3 away_team_api_id
+ 0.03109    5 Home_Team_Potential
+ 0.02988   22 Home_Team_Vision
+ 0.0282    11 Home_Team_Solleys
+ 0.02784   32 Away_Team_Dribbling
+ 0.02733   14 Home_Team_Long_passing
+ 0.02723   35 Away_Team_Ball_control
+ 0.02547   13 Home_Team_Curve
+ 0.02547   18 Home_Team_Agility
+ 0.0253    27 Away_Team_OverallRating
+ 0.02463   30 Away_Team_Short_passing
+ 0.02449   39 Away_Team_Reactions
+ 0.02342   25 Away_Team_Potential
+ 0.02269   38 Away_Team_Agility
+ 0.02236   21 Home_Team_Shot_power
+ 0.02141   16 Home_Team_Acceleration
+ 0.01996    2 home_team_api_id
+ 0.0199    17 Home_Team_Sprint_speed
+ 0.019     31 Away_Team_Solleys
+ 0.01865   42 Away_Team_Vision
+ 0.01845   34 Away_Team_Long_passing
+ 0.01805    6 Home_Team_Stamina
+ 0.01656   33 Away_Team_Curve
+ 0.01581   41 Away_Team_Shot_power
+ 0.01559   37 Away_Team_Sprint_speed
+ 0.0146    36 Away_Team_Acceleration
+ 0.01338    9 Home_Team_Heading_accuracy
+ 0.01322   20 Home_Team_Balance
+ 0.01236    8 Home_Team_FreeKick
+ 0.01123   26 Away_Team_Stamina
+ 0.01045   40 Away_Team_Balance
+ 0.00939   29 Away_Team_Heading_accuracy
+ 0.00769    4 Home_Team_Aggression
+ 0.00748   28 Away_Team_FreeKick
+ 0.00477   23 Home_Team_Marking
+ 0.00283   24 Away_Team_Aggression
+ 0.0028    43 Away_Team_Marking
+ 0          1 id
+
+Selected attributes: 15,12,7,19,10,3,5,22,11,32,14,35,13,18,27,30,39,25,38,21,16,2,17,31,42,34,6,33,41,37,36,9,20,8,26,40,29,4,28,23,24,43,1 : 43
+
+Correlation:
+Ranked attributes:
+ 0.14044   12 Home_Team_Dribbling
+ 0.13625   22 Home_Team_Vision
+ 0.13336   11 Home_Team_Solleys
+ 0.13228   15 Home_Team_Ball_control
+ 0.13111   10 Home_Team_Short_passing
+ 0.13011    5 Home_Team_Potential
+ 0.1289    14 Home_Team_Long_passing
+ 0.12813    7 Home_Team_OverallRating
+ 0.12683   19 Home_Team_Reactions
+ 0.12603   13 Home_Team_Curve
+ 0.11837   16 Home_Team_Acceleration
+ 0.11608   17 Home_Team_Sprint_speed
+ 0.11502   18 Home_Team_Agility
+ 0.11499   21 Home_Team_Shot_power
+ 0.1083    32 Away_Team_Dribbling
+ 0.10656    6 Home_Team_Stamina
+ 0.09861   35 Away_Team_Ball_control
+ 0.09833   38 Away_Team_Agility
+ 0.09791   42 Away_Team_Vision
+ 0.09778   30 Away_Team_Short_passing
+ 0.09641   27 Away_Team_OverallRating
+ 0.0945    25 Away_Team_Potential
+ 0.09149   31 Away_Team_Solleys
+ 0.08983   33 Away_Team_Curve
+ 0.08972   37 Away_Team_Sprint_speed
+ 0.08969   34 Away_Team_Long_passing
+ 0.08893   39 Away_Team_Reactions
+ 0.08829    9 Home_Team_Heading_accuracy
+ 0.08817   20 Home_Team_Balance
+ 0.08696   36 Away_Team_Acceleration
+ 0.08672    8 Home_Team_FreeKick
+ 0.08034   41 Away_Team_Shot_power
+ 0.07949   26 Away_Team_Stamina
+ 0.07252   29 Away_Team_Heading_accuracy
+ 0.07205   40 Away_Team_Balance
+ 0.0708     4 Home_Team_Aggression
+ 0.06174   28 Away_Team_FreeKick
+ 0.05611   23 Home_Team_Marking
+ 0.04288   43 Away_Team_Marking
+ 0.04029   24 Away_Team_Aggression
+ 0.01774    2 home_team_api_id
+ 0.00963    3 away_team_api_id
+ 0.00873    1 id
+
+Selected attributes: 12,22,11,15,10,5,14,7,19,13,16,17,18,21,32,6,35,38,42,30,27,25,31,33,37,34,39,9,20,36,8,41,26,29,40,4,28,23,43,24,2,3,1 : 43
+
+VERSION 1 DIMENSIONALITY REDUCTION RANKINGS
 Information Gain:
  Ranked attributes:
  0.0341    25 Home_Team_OverallRating
